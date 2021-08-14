@@ -9,6 +9,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -26,6 +28,7 @@
   background-size: cover;
   width: 90%;
   height: 20rem;
+  margin: 1rem;
   -webkit-box-shadow: 3px 3px 9px #32323288;
           box-shadow: 3px 3px 9px #32323288;
   color: #fff;
@@ -82,5 +85,65 @@
 
 .main .main-banner .data .data-item .h5, .main .main-banner .data .data-item .temp {
   margin: 0.25rem;
+}
+
+.main .forecast {
+  position: relative;
+  border-radius: 0.75rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  height: 20rem;
+  margin: 1rem;
+  -webkit-box-shadow: 3px 3px 9px #32323288;
+          box-shadow: 3px 3px 9px #32323288;
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main .forecast .cast-title {
+  margin: 1rem 1rem 0 1rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.main .forecast .cast-title::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ababab;
+  margin: 1rem 0;
+}
+
+.main .forecast .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.25rem 0;
+  padding: 0;
+  width: 100%;
+}
+
+.main .forecast .days .sub-section {
+  padding: 0.25rem 1rem;
+}
+
+.main .forecast .days .sub-section .day {
+  margin: 0.5rem 0;
+  font-size: medium;
+  color: #1e3dc4;
+}
+
+.main .forecast .days .sub-section .description, .main .forecast .days .sub-section .temp, .main .forecast .days .sub-section .temp-min, .main .forecast .days .sub-section .temp-max {
+  margin: 0.5rem 0;
+}
+
+.main .forecast .days .sub-section .temp-min {
+  color: #1498d4;
+}
+
+.main .forecast .days .sub-section .temp-max {
+  color: #bb4c2a;
 }
 /*# sourceMappingURL=styles.css.map */

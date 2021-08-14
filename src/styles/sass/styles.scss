@@ -8,6 +8,11 @@
 $fade: #32323288;
 $fade-dark: #232323bb;
 $white: #fff;
+$light-gray: #ababab;
+$black: #121212;
+$blue: #1e3dc4;
+$light-blue: #1498d4;
+$dark-red: #bb4c2a;
 
 //  Fonts
 $raleway: 'Raleway', sans-serif;
@@ -18,6 +23,7 @@ $montserrat: 'Montserrat', sans-serif;
 ::::::::::::::::::::*/
 .main {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-self: center;
     padding: 2rem 1rem;
@@ -31,6 +37,7 @@ $montserrat: 'Montserrat', sans-serif;
         background-size: cover;
         width: 90%;
         height: 20rem;
+        margin: 1rem;
         box-shadow: 3px 3px 9px $fade;
         color: $white;
         font-family: $montserrat;
@@ -75,6 +82,63 @@ $montserrat: 'Montserrat', sans-serif;
 
                 .h5, .temp {
                     margin: 0.25rem;
+                }
+            }
+        }
+    }
+
+    .forecast {
+        position: relative;
+        border-radius: 0.75rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 30%;
+        height: 20rem;
+        margin: 1rem;
+        box-shadow: 3px 3px 9px $fade;
+        color: $black;
+        font-family: $montserrat;
+
+        .cast-title {
+            margin: 1rem 1rem 0 1rem;
+            padding: 0.5rem 0.5rem 0 0.5rem;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: $light-gray;
+                margin: 1rem 0;
+            }
+        }
+
+        .days {
+            display: flex;
+            margin: 0.25rem 0;
+            padding: 0;
+            width: 100%;
+
+            .sub-section {
+                padding: 0.25rem 1rem;
+
+                .day {
+                    margin: 0.5rem 0;
+                    font-size: medium;
+                    color: $blue;
+                }
+
+                .description, .temp, .temp-min, .temp-max{
+                    margin: 0.5rem 0;
+                }
+
+                .temp-min {
+                    color: $light-blue;
+                }
+
+                .temp-max {
+                    color: $dark-red;
                 }
             }
         }
