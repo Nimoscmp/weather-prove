@@ -1,25 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@300;400;500&display=swap');
+
+/*::::::::::::::::::::
+::::  CONSTANTS   ::::
+::::::::::::::::::::*/
+
+//  Colors
+$fade: #32323288;
+$fade-dark: #232323bb;
+$white: #fff;
+
+//  Fonts
+$raleway: 'Raleway', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+/*::::::::::::::::::::
+::::    STYLES    ::::
+::::::::::::::::::::*/
 .main {
     display: flex;
     justify-content: center;
     align-self: center;
-    padding: 2rem;
+    padding: 2rem 1rem;
 
     .main-banner {
+        position: relative;
         border-radius: 0.75rem;
-        background-color: antiquewhite;
+        background-image: url("../../img/bogota.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 90%;
         height: 20rem;
-        position: relative;
+        box-shadow: 3px 3px 9px $fade;
+        color: $white;
+        font-family: $montserrat;
+
+        .fade {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.75rem;
+            background-color: $fade;
+        }
 
         .title {
             position: absolute;
-            top: 25%;
+            top: 20%;
             left: 2rem;
-            transform: translateY(-25%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-20%);
             margin: 0;
 
-            .m-05{
+            .m-05 {
                 margin: 0.5rem;
+            }
+
+            .city {
+                font-size: large;
             }
         }
 
@@ -28,11 +66,14 @@
             bottom: 25%;
             left: 2rem;
             transform: translateY(25%);
+            border-radius: 0.5rem;
+            background-color: $fade-dark;
+            padding: 0.5rem;
 
             .data-item {
-                margin: 0.25rem;
+                margin: 0.5rem 0.25rem;
 
-                .h5 {
+                .h5, .temp {
                     margin: 0.25rem;
                 }
             }

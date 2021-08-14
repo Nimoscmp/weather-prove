@@ -34,15 +34,12 @@ const MainBanner = () => {
     return (
     <>
         <section className="main-banner" >
+            <div className="fade"></div>
             <h5 className="title">
-                <i className="fas fa-map-marker-alt mp-05"></i>
-                <span className="m-05">Bogotá</span>
+                <i className="fas fa-map-marker-alt fa-2x m-05"></i>
+                <span className="city">Bogotá</span>
             </h5>
             <div className="data">
-                <img 
-                    src={''} 
-                    alt="weather"
-                    className=""/>
                 <div className="data-item">
                     <h5 className="h5">Temperatura</h5>
                     <span className="temp">29 &#8451;</span>
