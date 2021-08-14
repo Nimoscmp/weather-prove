@@ -8,6 +8,19 @@
         border-radius: 0.75rem;
         background-color: antiquewhite;
         width: 90%;
-        height: 10rem;
+        height: 20rem;
+        position: relative;
+
+        .title {
+            position: absolute;
+            top: 25%;
+            left: 2rem;
+            transform: translateY(-25%);
+            margin: 0;
+
+            .m-05{
+                margin: 0.5rem;
+            }
+        }
     }
 }

@@ -14,6 +14,20 @@
   border-radius: 0.75rem;
   background-color: antiquewhite;
   width: 90%;
-  height: 10rem;
+  height: 20rem;
+  position: relative;
+}
+
+.main .main-banner .title {
+  position: absolute;
+  top: 25%;
+  left: 2rem;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+  margin: 0;
+}
+
+.main .main-banner .title .m-05 {
+  margin: 0.5rem;
 }
 /*# sourceMappingURL=styles.css.map */
