@@ -51,52 +51,61 @@ const Forecast = () => {
             <div className="days">
                 <div className="sub-section">
                     <h5 className="day">{selectDay(today.getDay() + 1)}</h5>
-                    <p className="description">Cloudy</p>
                 </div>
                 <div className="sub-section">
-                    <p className="temp-max">Max</p>
-                    <p className="temp">15&#8451;</p>
+                    <p className="temp"><small>Max</small></p>
+                    <p className="temp-max">15&#8451;</p>
                 </div>
                 <div className="sub-section">
-                    <p className="temp-min">Min</p>
-                    <p className="temp">10&#8451;</p>
+                    <p className="temp"><small>Min</small></p>
+                    <p className="temp-min">10&#8451;</p>
                 </div>
                 <div className="sub-section">
-
+                    <p className="description"><strong>Cloudy</strong></p>
+                    <img 
+                        src={'https://openweathermap.org/img/w/10d.png'} 
+                        alt="weather1"
+                        className="" />
                 </div>
             </div>
             <div className="days">
                 <div className="sub-section">
                     <h5 className="day">{selectDay(today.getDay() + 2)}</h5>
-                    <p className="description">Rainy</p>
                 </div>
                 <div className="sub-section">
-                    <p className="temp-max">Max</p>
-                    <p className="temp">16&#8451;</p>
+                    <p className="temp"><small>Max</small></p>
+                    <p className="temp-max">16&#8451;</p>
                 </div>
                 <div className="sub-section">
-                    <p className="temp-min">Min</p>
-                    <p className="temp">9&#8451;</p>
+                    <p className="temp"><small>Min</small></p>
+                    <p className="temp-min">9&#8451;</p>
                 </div>
                 <div className="sub-section">
-
+                    <p className="description"><strong>Rainy</strong></p>
+                    <img 
+                        src={'https://openweathermap.org/img/w/10d.png'} 
+                        alt="weather2"
+                        className="" />
                 </div>
             </div>
             <div className="days">
                 <div className="sub-section">
                     <h5 className="day">{selectDay(today.getDay() + 3)}</h5>
-                    <p className="description">Sunny</p>
                 </div>
                 <div className="sub-section">
-                    <p className="temp-max">Max</p>
-                    <p className="temp">19&#8451;</p>
+                    <p className="temp"><small>Max</small></p>
+                    <p className="temp-max">19&#8451;</p>
                 </div>
                 <div className="sub-section">
-                    <p className="temp-min">Min</p>
-                    <p className="temp">12&#8451;</p>
+                    <p className="temp"><small>Min</small></p>
+                    <p className="temp-min">12&#8451;</p>
                 </div>
                 <div className="sub-section">
-
+                    <p className="description"><strong>Sunny</strong></p>
+                    <img 
+                        src={'https://openweathermap.org/img/w/10d.png'} 
+                        alt="weather3"
+                        className="" />
                 </div>
             </div>
         </section>        

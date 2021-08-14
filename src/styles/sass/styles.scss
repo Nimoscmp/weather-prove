@@ -9,6 +9,7 @@ $fade: #32323288;
 $fade-dark: #232323bb;
 $white: #fff;
 $light-gray: #ababab;
+$gray: #777;
 $black: #121212;
 $blue: #1e3dc4;
 $light-blue: #1498d4;
@@ -96,12 +97,14 @@ $montserrat: 'Montserrat', sans-serif;
         width: 30%;
         height: 20rem;
         margin: 1rem;
+        padding: 1rem;
         box-shadow: 3px 3px 9px $fade;
         color: $black;
         font-family: $montserrat;
 
         .cast-title {
-            margin: 1rem 1rem 0 1rem;
+            display: block;
+            margin: 1rem 0 0 0;
             padding: 0.5rem 0.5rem 0 0.5rem;
 
             &::after {
@@ -116,21 +119,25 @@ $montserrat: 'Montserrat', sans-serif;
 
         .days {
             display: flex;
-            margin: 0.25rem 0;
+            margin: 0.25rem 0.25rem;
             padding: 0;
-            width: 100%;
+            width: 95%;
 
             .sub-section {
-                padding: 0.25rem 1rem;
+                padding: 0.25rem;
 
                 .day {
-                    margin: 0.5rem 0;
-                    font-size: medium;
+                    margin: 1rem 0;
+                    font-size: large;
                     color: $blue;
                 }
 
-                .description, .temp, .temp-min, .temp-max{
+                .temp, .temp-min, .temp-max{
                     margin: 0.5rem 0;
+                }
+
+                .description {
+                    margin: 0;
                 }
 
                 .temp-min {
@@ -140,6 +147,18 @@ $montserrat: 'Montserrat', sans-serif;
                 .temp-max {
                     color: $dark-red;
                 }
+
+                .temp {
+                    color: $gray;
+                }
+            }
+
+            .sub-section:nth-child(1) {
+                width: 30%;
+            }
+
+            .sub-section:nth-child(2), .sub-section:nth-child(3) {
+                width: 10%;
             }
         }
     }
