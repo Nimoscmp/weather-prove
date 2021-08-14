@@ -30,4 +30,20 @@
 .main .main-banner .title .m-05 {
   margin: 0.5rem;
 }
+
+.main .main-banner .data {
+  position: absolute;
+  bottom: 25%;
+  left: 2rem;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
+}
+
+.main .main-banner .data .data-item {
+  margin: 0.25rem;
+}
+
+.main .main-banner .data .data-item .h5 {
+  margin: 0.25rem;
+}
 /*# sourceMappingURL=styles.css.map */

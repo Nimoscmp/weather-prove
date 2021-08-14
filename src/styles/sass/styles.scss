@@ -22,5 +22,20 @@
                 margin: 0.5rem;
             }
         }
+
+        .data {
+            position: absolute;
+            bottom: 25%;
+            left: 2rem;
+            transform: translateY(25%);
+
+            .data-item {
+                margin: 0.25rem;
+
+                .h5 {
+                    margin: 0.25rem;
+                }
+            }
+        }
     }
 }

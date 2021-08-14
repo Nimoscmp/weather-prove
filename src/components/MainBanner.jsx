@@ -43,17 +43,17 @@ const MainBanner = () => {
                     src={''} 
                     alt="weather"
                     className=""/>
-                <div>
-                    <h5>Temperatura</h5>
+                <div className="data-item">
+                    <h5 className="h5">Temperatura</h5>
                     <span className="temp">29 &#8451;</span>
                 </div>
-                <div>
-                    <h5>Sensación térmica</h5>
+                <div className="data-item">
+                    <h5 className="h5">Sensación térmica</h5>
                     <span className="temp">30 &#8451;</span>
                 </div>
-                <div>
-                    <h5>Nubes</h5>
-                    <span className="feels-like">81%</span>
+                <div className="data-item">
+                    <h5 className="h5">Nubosidad</h5>
+                    <span className="temp">81%</span>
                 </div>
             </div>
         </section>           
