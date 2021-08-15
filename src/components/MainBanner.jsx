@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getData } from '../services/api/weatherApi';
+// import { getData } from '../services/api/weatherApi';
 import '../styles/sass/styles.css';
 
 const MainBanner = () => {
