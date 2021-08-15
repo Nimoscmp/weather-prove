@@ -12,7 +12,7 @@ const Header = () => {
                     <span className="pointer">ESP</span>
                 </div>
                 <div className="theme">
-                    <i class="fas fa-adjust fa-2x trans-300 pointer"></i>
+                    <i className="fas fa-adjust fa-2x trans-300 pointer"></i>
                 </div>
             </nav>
         </header>

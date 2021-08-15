@@ -9,7 +9,9 @@ export const dataSpanish = {
         second: 'de 3 días'
     },
     custom: {
-        btn: 'Buscar lugar'
+        title: 'Buscar un lugar',
+        city: 'Ciudad',
+        actionBtn: 'Buscar'
     }
 }
 
@@ -24,6 +26,8 @@ export const dataEnglish = {
         second: 'forecast'
     },
     custom: {
-        btn: 'Look place'
+        title: 'Look for a place',
+        city: 'City',
+        actionBtn: 'Go'
     }
 }
