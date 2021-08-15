@@ -57,17 +57,57 @@ $roboto: 'Roboto', sans-serif;
     }
 }
 
+.rotate-180 {
+    transform: rotate(-180deg);
+}
+
+.trans-300 {
+    transition: all 0.3s ease-in-out;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
 /*::::::::::::::::::::
 ::::    STYLES    ::::
 ::::::::::::::::::::*/
 
+//  Header
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+
+    .nav {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 90%;
+
+        .language {
+            margin: 0.5rem;
+            color: $gray;
+    
+            span {
+                margin: 0.4rem;
+            }
+        }
+    
+        .theme {
+            margin: 0.5rem;
+        }
+    }
+}
 
 .main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
-    padding: 2rem 1rem;
+    padding: 1rem;
 
     //  Main banner
     .bg-day {
@@ -226,6 +266,18 @@ $roboto: 'Roboto', sans-serif;
             height: 4rem;
             border-radius: 0.75rem 0.75rem 0 0;
             background-color: $fade-dark;
+        }
+    }
+}
+
+/*::::::::::::::::::::
+::  MEDIA QUERIES  :::
+::::::::::::::::::::*/
+
+@media screen and (max-width: 480px) {
+    .header {
+        .nav {
+            justify-content: space-between;
         }
     }
 }
