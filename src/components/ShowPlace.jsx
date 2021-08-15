@@ -25,38 +25,40 @@ const ShowPlace = ({clickedSearchBtn, cityName, error}) => {
                     if (this.readyState === 4 && this.status === 200) {
                         json = JSON.parse(this.response);
                         setResponse(json);
-                        console.log(json.lat);
                         setErrorResponse(false);
                     } else if (this.status !== 200) {
                         setErrorResponse(true);
                     }
                 }
             }
-            // getData();
+            getData('en');
             console.log(response);
+            if (!errorResponse && !error) {
+                setShowPlace(true);
+            }
         }
         // eslint-disable-next-line
     }, [clickedSearchBtn])
 
     return (
     <>
-        <div>
+        <div className="show-place">
 
             {showPlace && !error ?
             <>
-                <div>
+                <div className="first-set">
                     <i className="fas fa-map-marker-alt fa-2x m-05"></i>
-                    <span className="city">{cityName}</span>
+                    <span className="city">{response?.name}</span>
                     <img 
-                        src={'https://openweathermap.org/img/w/10d.png'} 
+                        src={`https://openweathermap.org/img/w/${ response?.weather[0].icon }.png`} 
                         alt="weather"
                         className="" />
                 </div>
-                <div>
-                    <span>Cloudy</span>
-                    <span className="temp-max">19&#8451;</span>
+                <div className="sec-set">
+                    <span>{ response?.weather[0].description }</span>
+                    <span className="temp-max">{Math.round(response?.main.temp_max)}&#8451;</span>
                     <span className="temp">/</span>
-                    <span className="temp-min">12&#8451;</span>
+                    <span className="temp-min">{Math.round(response?.main.temp_min)}&#8451;</span>
                 </div>
             </>
             : error ?
