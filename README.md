@@ -1,12 +1,14 @@
-# Getting Started with Create React App
+# React App para obtención de datos del clima desde API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación sencilla que muestra los datos del clima de algunas ciudades desde la API de [https://openweathermap.org/], donde se pueden realizar diferentes llamados para los datos específicos del clima actual y su pronóstico.
 
-## Available Scripts
+El deployment se encuentra en: []
 
-In the project directory, you can run:
+## Estructura
 
-### `yarn start`
+Está dividido en cuatro secciones
+
+### `Banner de Bogotá`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
