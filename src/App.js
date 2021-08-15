@@ -1,3 +1,4 @@
+import Custom from "./components/Custom";
 import Forecast from "./components/Forecast";
 import Header from "./components/Header";
 import MainBanner from "./components/MainBanner";
@@ -10,8 +11,11 @@ function App() {
       <Header/>
       <main className="main">
         <MainBanner/>
-        <Forecast/>
-        <ParisBanner/>
+        <div className="secondary">
+          <Forecast/>
+          <Custom/>
+          <ParisBanner/>
+        </div>
       </main>
     </>
   );

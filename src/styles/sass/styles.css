@@ -151,15 +151,32 @@
   margin: 0;
 }
 
-.main .forecast {
+.main .secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.main .secondary .forecast {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   border-radius: 0.75rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 30%;
+  width: 31%;
   height: 20rem;
-  margin: 1rem;
+  margin: 1rem 0rem;
   padding: 1rem;
   -webkit-box-shadow: 3px 3px 9px #32323288;
           box-shadow: 3px 3px 9px #32323288;
@@ -167,7 +184,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.main .forecast .cast-title {
+.main .secondary .forecast .cast-title {
   display: block;
   margin: 0;
   padding: 0.5rem 0.5rem 0 0.5rem;
@@ -175,11 +192,11 @@
   font-weight: 300;
 }
 
-.main .forecast .cast-title span {
+.main .secondary .forecast .cast-title span {
   font-weight: 500;
 }
 
-.main .forecast .cast-title::after {
+.main .secondary .forecast .cast-title::after {
   content: '';
   display: block;
   width: 100%;
@@ -188,7 +205,7 @@
   margin: 1rem 0;
 }
 
-.main .forecast .days {
+.main .secondary .forecast .days {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,36 +215,36 @@
   width: 95%;
 }
 
-.main .forecast .days .sub-section {
+.main .secondary .forecast .days .sub-section {
   padding: 0.25rem;
   border-radius: 0.5rem;
 }
 
-.main .forecast .days .sub-section .day {
+.main .secondary .forecast .days .sub-section .day {
   margin: 0.25rem 0;
   font-family: "Raleway", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: #1498d4;
 }
 
-.main .forecast .days .sub-section .temp-min, .main .forecast .days .sub-section .temp-max {
+.main .secondary .forecast .days .sub-section .temp-min, .main .secondary .forecast .days .sub-section .temp-max {
   margin: 0.5rem 0.25rem;
 }
 
-.main .forecast .days .sub-section .description {
+.main .secondary .forecast .days .sub-section .description {
   margin: 0.25rem 0;
   font-family: "Raleway", sans-serif;
 }
 
-.main .forecast .days .sub-section .temp-min, .main .forecast .days .sub-section .temp-max {
+.main .secondary .forecast .days .sub-section .temp-min, .main .secondary .forecast .days .sub-section .temp-max {
   color: #fff;
 }
 
-.main .forecast .days .sub-section .temp {
+.main .secondary .forecast .days .sub-section .temp {
   color: #777;
 }
 
-.main .forecast .days .sub-section:nth-child(1), .main .forecast .days .sub-section:nth-child(3) {
+.main .secondary .forecast .days .sub-section:nth-child(1), .main .secondary .forecast .days .sub-section:nth-child(3) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,15 +256,15 @@
           align-items: center;
 }
 
-.main .forecast .days .sub-section:nth-child(1) {
+.main .secondary .forecast .days .sub-section:nth-child(1) {
   width: 15%;
 }
 
-.main .forecast .days .sub-section:nth-child(2) {
+.main .secondary .forecast .days .sub-section:nth-child(2) {
   width: 35%;
 }
 
-.main .forecast .days .sub-section:nth-child(3) {
+.main .secondary .forecast .days .sub-section:nth-child(3) {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -258,23 +275,25 @@
   background-color: #1e3dc4;
 }
 
-.main .paris-banner {
+.main .secondary .paris-banner {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   border-radius: 0.75rem;
   background-image: url("../../img/paris.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 30%;
-  height: 22rem;
-  margin: 1rem;
+  width: 31%;
+  height: 20rem;
+  margin: 1rem 0rem;
   -webkit-box-shadow: 3px 3px 9px #32323288;
           box-shadow: 3px 3px 9px #32323288;
   color: #fff;
   font-family: "Montserrat", sans-serif;
 }
 
-.main .paris-banner .title {
+.main .secondary .paris-banner .title {
   position: relative;
   z-index: 10;
   display: -webkit-box;
@@ -288,14 +307,75 @@
   background-color: #232323bb;
 }
 
+.main .secondary .custom {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  border-radius: 0.75rem;
+  width: 31%;
+  height: 20rem;
+  margin: 1rem 0rem;
+  padding: 1rem;
+  -webkit-box-shadow: 3px 3px 9px #32323288;
+          box-shadow: 3px 3px 9px #32323288;
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main .secondary .custom .button {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  background-color: #1498d4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 6px #32323288;
+          box-shadow: 2px 2px 6px #32323288;
+}
+
+.main .secondary .custom .button:hover {
+  background-color: #1e3dc4;
+}
+
+.main .secondary .custom .country {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
+
 /*::::::::::::::::::::
 ::  MEDIA QUERIES  :::
 ::::::::::::::::::::*/
+@media screen and (max-width: 1250px) {
+  .main .secondary .forecast .days .sub-section .day {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .main .secondary .forecast, .main .secondary .custom {
+    width: 48%;
+  }
+  .main .secondary .paris-banner {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main .secondary .forecast, .main .secondary .custom {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .header .nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .main .secondary .forecast .days .sub-section .day {
+    font-size: 1.1rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

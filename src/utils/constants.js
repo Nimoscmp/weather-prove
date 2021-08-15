@@ -7,6 +7,9 @@ export const dataSpanish = {
     forecast: {
         first: 'Pronóstico',
         second: 'de 3 días'
+    },
+    custom: {
+        btn: 'Buscar lugar'
     }
 }
 
@@ -19,5 +22,8 @@ export const dataEnglish = {
     forecast: {
         first: '3 days',
         second: 'forecast'
+    },
+    custom: {
+        btn: 'Look place'
     }
 }

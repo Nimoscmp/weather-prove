@@ -90,7 +90,7 @@ const Forecast = () => {
                         className="" />
                 </div>
                 <div className="sub-section">
-                    <h5 className="day">{selectDay(today.getDay() + 3)}</h5>
+                    <h5 className="day">Wednesday</h5>
                     <p className="description"><strong>Sunny</strong></p>
                 </div>
                 <div className="sub-section">
