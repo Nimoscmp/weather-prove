@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap");
 /*::::::::::::::::::::
 ::::  CONSTANTS   ::::
 ::::::::::::::::::::*/
@@ -19,10 +19,17 @@
   padding: 2rem 1rem;
 }
 
+.main .bg-day {
+  background-image: url("../../img/bogota2.jpg");
+}
+
+.main .bg-night {
+  background-image: url("../../img/bogota.jpg");
+}
+
 .main .main-banner {
   position: relative;
   border-radius: 0.75rem;
-  background-image: url("../../img/bogota.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -105,8 +112,14 @@
 
 .main .forecast .cast-title {
   display: block;
-  margin: 1rem 0 0 0;
+  margin: 0;
   padding: 0.5rem 0.5rem 0 0.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.main .forecast .cast-title span {
+  font-weight: 500;
 }
 
 .main .forecast .cast-title::after {
@@ -122,46 +135,69 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   margin: 0.25rem 0.25rem;
-  padding: 0;
+  padding-bottom: 0.25rem;
   width: 95%;
 }
 
 .main .forecast .days .sub-section {
   padding: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .main .forecast .days .sub-section .day {
-  margin: 1rem 0;
-  font-size: large;
-  color: #1e3dc4;
-}
-
-.main .forecast .days .sub-section .temp, .main .forecast .days .sub-section .temp-min, .main .forecast .days .sub-section .temp-max {
-  margin: 0.5rem 0;
-}
-
-.main .forecast .days .sub-section .description {
-  margin: 0;
-}
-
-.main .forecast .days .sub-section .temp-min {
+  margin: 0.25rem 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
   color: #1498d4;
 }
 
-.main .forecast .days .sub-section .temp-max {
-  color: #bb4c2a;
+.main .forecast .days .sub-section .temp-min, .main .forecast .days .sub-section .temp-max {
+  margin: 0.5rem 0.25rem;
+}
+
+.main .forecast .days .sub-section .description {
+  margin: 0.25rem 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.main .forecast .days .sub-section .temp-min, .main .forecast .days .sub-section .temp-max {
+  color: #fff;
 }
 
 .main .forecast .days .sub-section .temp {
   color: #777;
 }
 
-.main .forecast .days .sub-section:nth-child(1) {
-  width: 30%;
+.main .forecast .days .sub-section:nth-child(1), .main .forecast .days .sub-section:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.main .forecast .days .sub-section:nth-child(2), .main .forecast .days .sub-section:nth-child(3) {
-  width: 10%;
+.main .forecast .days .sub-section:nth-child(1) {
+  width: 15%;
+}
+
+.main .forecast .days .sub-section:nth-child(2) {
+  width: 35%;
+}
+
+.main .forecast .days .sub-section:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  width: 30%;
+  margin: 0 0.5rem;
+  background-color: #1e3dc4;
 }
 /*# sourceMappingURL=styles.css.map */

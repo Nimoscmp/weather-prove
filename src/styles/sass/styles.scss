@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap');
 
 /*::::::::::::::::::::
 ::::  CONSTANTS   ::::
@@ -18,10 +18,13 @@ $dark-red: #bb4c2a;
 //  Fonts
 $raleway: 'Raleway', sans-serif;
 $montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
 
 /*::::::::::::::::::::
 ::::    STYLES    ::::
 ::::::::::::::::::::*/
+
+
 .main {
     display: flex;
     flex-wrap: wrap;
@@ -29,10 +32,18 @@ $montserrat: 'Montserrat', sans-serif;
     align-self: center;
     padding: 2rem 1rem;
 
+    //  Main banner
+    .bg-day {
+        background-image: url("../../img/bogota2.jpg");
+    }
+
+    .bg-night {
+        background-image: url("../../img/bogota.jpg");
+    }
+
     .main-banner {
         position: relative;
         border-radius: 0.75rem;
-        background-image: url("../../img/bogota.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -88,6 +99,7 @@ $montserrat: 'Montserrat', sans-serif;
         }
     }
 
+    //  Forecast banner
     .forecast {
         position: relative;
         border-radius: 0.75rem;
@@ -104,8 +116,14 @@ $montserrat: 'Montserrat', sans-serif;
 
         .cast-title {
             display: block;
-            margin: 1rem 0 0 0;
+            margin: 0;
             padding: 0.5rem 0.5rem 0 0.5rem;
+            font-family: $roboto;
+            font-weight: 300;
+
+            span {
+                font-weight: 500;
+            }
 
             &::after {
                 content: '';
@@ -119,33 +137,33 @@ $montserrat: 'Montserrat', sans-serif;
 
         .days {
             display: flex;
+            position: relative;
             margin: 0.25rem 0.25rem;
-            padding: 0;
+            padding-bottom: 0.25rem;
             width: 95%;
 
             .sub-section {
                 padding: 0.25rem;
+                border-radius: 0.5rem;
 
                 .day {
-                    margin: 1rem 0;
-                    font-size: large;
-                    color: $blue;
-                }
-
-                .temp, .temp-min, .temp-max{
-                    margin: 0.5rem 0;
-                }
-
-                .description {
-                    margin: 0;
-                }
-
-                .temp-min {
+                    margin: 0.25rem 0;
+                    font-family: $raleway;
+                    font-size: 1.5rem;
                     color: $light-blue;
                 }
 
-                .temp-max {
-                    color: $dark-red;
+                .temp-min, .temp-max{
+                    margin: 0.5rem 0.25rem;
+                }
+
+                .description {
+                    margin: 0.25rem 0;
+                    font-family: $raleway;
+                }
+
+                .temp-min , .temp-max{
+                    color: $white;
                 }
 
                 .temp {
@@ -153,12 +171,28 @@ $montserrat: 'Montserrat', sans-serif;
                 }
             }
 
+            .sub-section:nth-child(1) , .sub-section:nth-child(3){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
             .sub-section:nth-child(1) {
-                width: 30%;
+                width: 15%;
             }
 
-            .sub-section:nth-child(2), .sub-section:nth-child(3) {
-                width: 10%;
+            .sub-section:nth-child(2) {
+                width: 35%;
+            }
+
+            .sub-section:nth-child(3) {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                width: 30%;
+                margin: 0 0.5rem;
+                background-color: $blue;
             }
         }
     }

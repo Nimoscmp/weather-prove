@@ -4,7 +4,20 @@ import '../styles/sass/styles.css';
 
 const MainBanner = () => {
 
+    //  Constants
+    const today = new Date();
+    const hours = today.getHours();
+
+    //  Local states
+    const [isNight, setIsNight] = useState(false);
     const [response, setResponse] = useState();
+
+    useEffect(() => {
+        if ((hours >= 18 && hours <= 24) || (hours <= 0 && hours < 6)) {
+            setIsNight(true);
+        }
+        // eslint-disable-next-line
+    }, [])
 
     // useEffect(() => {
     //     const getData = () => {
@@ -33,11 +46,15 @@ const MainBanner = () => {
 
     return (
     <>
-        <section className="main-banner" >
+        <section className={ isNight ? "main-banner bg-night" : "main-banner bg-day"}>
             <div className="fade"></div>
             <h5 className="title">
                 <i className="fas fa-map-marker-alt fa-2x m-05"></i>
                 <span className="city">Bogotá</span>
+                <img 
+                    src={'https://openweathermap.org/img/w/10d.png'} 
+                    alt="weather"
+                    className="" />
             </h5>
             <div className="data">
                 <div className="data-item">
