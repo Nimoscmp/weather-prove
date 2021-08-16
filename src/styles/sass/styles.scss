@@ -15,6 +15,7 @@ $blue: #1e3dc4;
 $light-blue: #1498d4;
 $light-blue-hov: #20b7fd;
 $dark-red: #bb4c2a;
+$dark: #373737;
 
 //  Fonts
 $raleway: 'Raleway', sans-serif;
@@ -75,6 +76,18 @@ $roboto: 'Roboto', sans-serif;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bg-dark {
+    background-color: $dark;
+}
+
+.color-light {
+    color: $white;
+}
+
+.shadow-light {
+    box-shadow: 3px 3px 9px $light-gray;
 }
 
 /*::::::::::::::::::::

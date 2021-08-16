@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from 'react-redux';
 import Custom from "./components/Custom";
 import Forecast from "./components/Forecast";
 import Header from "./components/Header";
@@ -11,6 +12,8 @@ function App() {
 
   const [loaded, setLoaded] = useState(false);
 
+  const dark = useSelector(state => state.theme);
+
   window.addEventListener('load', () => {
     setLoaded(true);
   })
@@ -20,7 +23,7 @@ function App() {
       {loaded ?
         <>
           <Header/>
-          <main className="main">
+          <main className={dark ? "main bg-dark trans-300" : "main trans-300"}>
             <MainBanner/>
             <div className="secondary">
               <Forecast/>
