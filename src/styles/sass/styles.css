@@ -558,8 +558,17 @@
   .main .main-banner {
     margin: 1rem;
   }
+  .main .secondary .forecast {
+    padding: 0.3rem;
+  }
   .main .secondary .forecast .days .sub-section .day {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+  }
+  .main .secondary .forecast .days .sub-section .description {
+    font-size: 0.8rem;
+  }
+  .main .secondary .forecast .days .sub-section .temp-max, .main .secondary .forecast .days .sub-section .temp-min {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

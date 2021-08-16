@@ -28,22 +28,22 @@ const MainBanner = () => {
     useEffect(() => {
         const getData = () => {
 
-            // const api_key = '0b79dea464b8f769b18696de8de31770';
-            // // const base_url = `https://api.openweathermap.org/data/2.5/onecall?lat=${ lat }&lon=${ lon }&exclude=minutely,hourly&appid=${ api_key }&units=${ units }`;
-            // const base_url = `https://api.openweathermap.org/data/2.5/weather?q=Bogota&lang=es&appid=${ api_key }&units=metric`;
-            // const xhttp = new XMLHttpRequest();
-            // var json;
+            const api_key = '0b79dea464b8f769b18696de8de31770';
+            const base_url = `https://api.openweathermap.org/data/2.5/weather?q=Bogota&lang=es&appid=${ api_key }&units=metric`;
+            
+            const xhttp = new XMLHttpRequest();
+            var json;
         
-            // xhttp.open('GET', base_url, true);
+            xhttp.open('GET', base_url, true);
         
-            // xhttp.send();
+            xhttp.send();
         
-            // xhttp.onreadystatechange = function() {
-            //     if (this.readyState === 4 && this.status === 200) {
-            //         json = JSON.parse(this.response);
-            //         setResponse(json);
-            //     }
-            // }
+            xhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    json = JSON.parse(this.response);
+                    setResponse(json);
+                }
+            }
         }
         // getData();
         // eslint-disable-next-line

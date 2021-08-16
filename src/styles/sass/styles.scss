@@ -530,7 +530,21 @@ $roboto: 'Roboto', sans-serif;
         }
     }
 
-    .main .secondary .forecast .days .sub-section .day {
-        font-size: 1.1rem;
+    .main .secondary .forecast {
+        padding: 0.3rem;
+    }
+
+    .main .secondary .forecast .days .sub-section{
+        .day {
+            font-size: 0.9rem;
+        }
+
+        .description {
+            font-size: 0.8rem;
+        }
+
+        .temp-max, .temp-min {
+            font-size: 0.8rem;
+        }
     }
 }
