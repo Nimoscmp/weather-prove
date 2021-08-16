@@ -18,7 +18,7 @@ const Header = () => {
     <>
         <header className={dark ? "header bg-dark trans-300" : "header trans-300"}>
             <nav className="nav">
-                <div className="language">
+                <div className={dark ? "language color-light-gray" : "language color-gray"}>
                     <span 
                         className="pointer"
                         >ENG</span>

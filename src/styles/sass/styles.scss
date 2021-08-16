@@ -91,6 +91,18 @@ $roboto: 'Roboto', sans-serif;
     color: $white;
 }
 
+.color-gray {
+    color: $gray;
+}
+
+.color-light-gray {
+    color: $light-gray;
+}
+
+.color-dark {
+    color: $dark;
+}
+
 .shadow-light {
     box-shadow: 3px 3px 9px $light;
 }
@@ -156,7 +168,6 @@ $roboto: 'Roboto', sans-serif;
 
         .language {
             margin: 0.5rem;
-            color: $gray;
     
             span {
                 margin: 0.4rem;

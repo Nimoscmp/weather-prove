@@ -72,6 +72,18 @@
   color: #fff;
 }
 
+.color-gray {
+  color: #777;
+}
+
+.color-light-gray {
+  color: #ababab;
+}
+
+.color-dark {
+  color: #2e2e2e;
+}
+
 .shadow-light {
   -webkit-box-shadow: 3px 3px 9px #ccc;
           box-shadow: 3px 3px 9px #ccc;
@@ -154,7 +166,6 @@
 
 .header .nav .language {
   margin: 0.5rem;
-  color: #777;
 }
 
 .header .nav .language span {
