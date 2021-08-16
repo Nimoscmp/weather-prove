@@ -63,15 +63,15 @@ const ShowPlace = ({clickedSearchBtn, cityName, error}) => {
             </>
             : error ?
             <>
-                <p>Digita correctamente</p>
+                <p className="p-05">Digita correctamente</p>
             </>
             : errorResponse ?
             <>
-                <p>Hubo un error en la búsqueda</p>
+                <p className="p-05">Hubo un error en la búsqueda</p>
             </>
             :
             <>
-                <p>Haz la busqueda</p>
+                <p className="p-05">Haz la busqueda</p>
             </>
             }
 

@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react"
+import { useSelector } from "react-redux";
 
 const ParisBanner = () => {
-
+    //  Local states
     const [response, setResponse] = useState();
+
+    //  Global states
+    const dark = useSelector(state => state.theme);
 
     useEffect(() => {
         const getData = () => {
@@ -31,7 +35,7 @@ const ParisBanner = () => {
 
     return (
     <>
-        <section className="paris-banner">
+        <section className={dark ? "paris-banner shadow-light" : "paris-banner shadow-dark"}>
             <div className="fade"></div>
             <div className="title">
                 <i className="fas fa-map-marker-alt fa-2x m-05"></i>

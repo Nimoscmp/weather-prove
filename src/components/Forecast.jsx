@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { calculateDay } from '../utils/calculations';
 
 const Forecast = () => {
@@ -8,6 +9,9 @@ const Forecast = () => {
 
     //  Local states
     const [response, setResponse] = useState();
+
+    //  Global states
+    const dark = useSelector(state => state.theme);
 
     //  Day names
     const selectDay = (day) => {
@@ -53,8 +57,8 @@ const Forecast = () => {
 
     return (
     <>
-        <section className="forecast">
-            <h3 className="cast-title"><span>3 days</span> forecast</h3>
+        <section className={dark ? "forecast shadow-light" : "forecast shadow-dark"}>
+            <h3 className={dark ? "cast-title color-light" : "cast-title"}><span>3 days</span> forecast</h3>
 
             <div className="days">
                 <div className="sub-section">
@@ -65,7 +69,7 @@ const Forecast = () => {
                 </div>
                 <div className="sub-section">
                     <h5 className="day">{selectDay(today.getDay() + 1)}</h5>
-                    <p className="description"><strong>{response?.daily[0].weather[0].description}</strong></p>
+                    <p className={dark ? "description color-light" : "description"}><strong>{response?.daily[0].weather[0].description}</strong></p>
                 </div>
                 <div className="sub-section">
                     <span className="temp-max">{Math.round(response?.daily[0].temp.max)}&#8451;</span>
@@ -82,7 +86,7 @@ const Forecast = () => {
                 </div>
                 <div className="sub-section">
                     <h5 className="day">{selectDay(today.getDay() + 2)}</h5>
-                    <p className="description"><strong>{response?.daily[1].weather[0].description}</strong></p>
+                    <p className={dark ? "description color-light" : "description"}><strong>{response?.daily[1].weather[0].description}</strong></p>
                 </div>
                 <div className="sub-section">
                     <span className="temp-max">{Math.round(response?.daily[1].temp.max)}&#8451;</span>
@@ -99,7 +103,7 @@ const Forecast = () => {
                 </div>
                 <div className="sub-section">
                     <h5 className="day">{selectDay(today.getDay() + 3)}</h5>
-                    <p className="description"><strong>{response?.daily[2].weather[0].description}</strong></p>
+                    <p className={dark ? "description color-light" : "description"}><strong>{response?.daily[2].weather[0].description}</strong></p>
                 </div>
                 <div className="sub-section">
                     <span className="temp-max">{Math.round(response?.daily[2].temp.max)}&#8451;</span>

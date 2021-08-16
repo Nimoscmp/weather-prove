@@ -20,6 +20,10 @@
   margin: 0.5rem;
 }
 
+.p-05 {
+  padding: 0.5rem;
+}
+
 .data {
   position: absolute;
   bottom: 5rem;
@@ -61,7 +65,7 @@
 }
 
 .bg-dark {
-  background-color: #373737;
+  background-color: #2e2e2e;
 }
 
 .color-light {
@@ -69,8 +73,13 @@
 }
 
 .shadow-light {
-  -webkit-box-shadow: 3px 3px 9px #ababab;
-          box-shadow: 3px 3px 9px #ababab;
+  -webkit-box-shadow: 3px 3px 9px #ccc;
+          box-shadow: 3px 3px 9px #ccc;
+}
+
+.shadow-dark {
+  -webkit-box-shadow: 3px 3px 9px #32323288;
+          box-shadow: 3px 3px 9px #32323288;
 }
 
 /*::::::::::::::::::::
@@ -168,6 +177,7 @@
   -ms-flex-item-align: center;
       align-self: center;
   padding: 1rem;
+  height: calc(100vh - 4.5rem);
 }
 
 .main .bg-day {
@@ -186,9 +196,7 @@
   background-size: cover;
   width: 90%;
   height: 20rem;
-  margin: 1rem;
-  -webkit-box-shadow: 3px 3px 9px #32323288;
-          box-shadow: 3px 3px 9px #32323288;
+  margin: 3rem 1rem 1rem;
   color: #fff;
   font-family: "Montserrat", sans-serif;
 }
@@ -238,8 +246,6 @@
   height: 20rem;
   margin: 1rem 0rem;
   padding: 1rem;
-  -webkit-box-shadow: 3px 3px 9px #32323288;
-          box-shadow: 3px 3px 9px #32323288;
   color: #121212;
   font-family: "Montserrat", sans-serif;
 }
@@ -250,6 +256,8 @@
   padding: 0.5rem 0.5rem 0 0.5rem;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .main .secondary .forecast .cast-title span {
@@ -294,6 +302,8 @@
 .main .secondary .forecast .days .sub-section .description {
   margin: 0.25rem 0;
   font-family: "Raleway", sans-serif;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .main .secondary .forecast .days .sub-section .temp-min, .main .secondary .forecast .days .sub-section .temp-max {
@@ -347,8 +357,6 @@
   width: 31%;
   height: 20rem;
   margin: 1rem 0rem;
-  -webkit-box-shadow: 3px 3px 9px #32323288;
-          box-shadow: 3px 3px 9px #32323288;
   color: #fff;
   font-family: "Montserrat", sans-serif;
 }
@@ -375,8 +383,6 @@
   width: 31%;
   height: 20rem;
   margin: 1rem 0rem;
-  -webkit-box-shadow: 3px 3px 9px #32323288;
-          box-shadow: 3px 3px 9px #32323288;
   color: #121212;
   font-family: "Montserrat", sans-serif;
 }
@@ -493,6 +499,12 @@
 }
 
 @media screen and (max-width: 1150px) {
+  .main {
+    height: auto;
+  }
+  .main .main-banner {
+    margin: 1rem;
+  }
   .main .secondary .forecast, .main .secondary .custom {
     width: 48%;
   }
@@ -502,6 +514,12 @@
 }
 
 @media screen and (max-width: 650px) {
+  .main {
+    height: auto;
+  }
+  .main .main-banner {
+    margin: 1rem;
+  }
   .main .secondary .forecast, .main .secondary .custom {
     width: 100%;
   }
@@ -512,6 +530,12 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .main {
+    height: auto;
+  }
+  .main .main-banner {
+    margin: 1rem;
   }
   .main .secondary .forecast .days .sub-section .day {
     font-size: 1.1rem;

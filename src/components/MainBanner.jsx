@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 // import { getData } from '../services/api/weatherApi';
 import '../styles/sass/styles.css';
 
@@ -11,6 +12,9 @@ const MainBanner = () => {
     //  Local states
     const [isNight, setIsNight] = useState(false);
     const [response, setResponse] = useState();
+
+    //  Global states
+    const dark = useSelector(state => state.theme);
 
     useEffect(() => {
         if ((hours >= 18 && hours <= 24) || (hours <= 0 && hours < 6)) {
@@ -47,7 +51,7 @@ const MainBanner = () => {
 
     return (
     <>
-        <section className={ isNight ? "main-banner bg-night" : "main-banner bg-day"}>
+        <section className={dark && isNight ? "main-banner bg-night shadow-light" : dark && !isNight ? "main-banner bg-day shadow-light" : !dark && isNight ? "main-banner shadow-dark bg-night" : "main-banner shadow-dark bg-day"}>
             <div className="fade"></div>
             <h5 className="title">
                 <i className="fas fa-map-marker-alt fa-2x m-05"></i>

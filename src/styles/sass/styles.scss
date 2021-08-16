@@ -15,7 +15,8 @@ $blue: #1e3dc4;
 $light-blue: #1498d4;
 $light-blue-hov: #20b7fd;
 $dark-red: #bb4c2a;
-$dark: #373737;
+$dark: #2e2e2e;
+$light: #ccc;
 
 //  Fonts
 $raleway: 'Raleway', sans-serif;
@@ -39,6 +40,10 @@ $roboto: 'Roboto', sans-serif;
 
 .m-05 {
     margin: 0.5rem;
+}
+
+.p-05 {
+    padding: 0.5rem;
 }
 
 .data {
@@ -87,7 +92,11 @@ $roboto: 'Roboto', sans-serif;
 }
 
 .shadow-light {
-    box-shadow: 3px 3px 9px $light-gray;
+    box-shadow: 3px 3px 9px $light;
+}
+
+.shadow-dark {
+    box-shadow: 3px 3px 9px $fade;
 }
 
 /*::::::::::::::::::::
@@ -166,6 +175,7 @@ $roboto: 'Roboto', sans-serif;
     justify-content: center;
     align-self: center;
     padding: 1rem;
+    height: calc(100vh - 4.5rem);
 
     //  Main banner
     .bg-day {
@@ -184,8 +194,7 @@ $roboto: 'Roboto', sans-serif;
         background-size: cover;
         width: 90%;
         height: 20rem;
-        margin: 1rem;
-        box-shadow: 3px 3px 9px $fade;
+        margin: 3rem 1rem 1rem;
         color: $white;
         font-family: $montserrat;
 
@@ -222,7 +231,6 @@ $roboto: 'Roboto', sans-serif;
             height: 20rem;
             margin: 1rem 0rem;
             padding: 1rem;
-            box-shadow: 3px 3px 9px $fade;
             color: $black;
             font-family: $montserrat;
 
@@ -232,6 +240,7 @@ $roboto: 'Roboto', sans-serif;
                 padding: 0.5rem 0.5rem 0 0.5rem;
                 font-family: $roboto;
                 font-weight: 300;
+                transition: color 0.3s ease-in-out;
 
                 span {
                     font-weight: 500;
@@ -272,6 +281,7 @@ $roboto: 'Roboto', sans-serif;
                     .description {
                         margin: 0.25rem 0;
                         font-family: $raleway;
+                        transition: color 0.3s ease-in-out;
                     }
 
                     .temp-min , .temp-max{
@@ -321,7 +331,6 @@ $roboto: 'Roboto', sans-serif;
             width: 31%;
             height: 20rem;
             margin: 1rem 0rem;
-            box-shadow: 3px 3px 9px $fade;
             color: $white;
             font-family: $montserrat;
 
@@ -344,7 +353,6 @@ $roboto: 'Roboto', sans-serif;
             width: 31%;
             height: 20rem;
             margin: 1rem 0rem;
-            box-shadow: 3px 3px 9px $fade;
             color: $black;
             font-family: $montserrat;
 
@@ -452,6 +460,14 @@ $roboto: 'Roboto', sans-serif;
 }
 
 @media screen and (max-width: 1150px) {
+    .main {
+        height: auto;
+
+        .main-banner {
+            margin: 1rem;
+        }
+    }
+
     .main .secondary {
         .forecast, .custom {
             width: 48%;
@@ -464,6 +480,14 @@ $roboto: 'Roboto', sans-serif;
 }
 
 @media screen and (max-width: 650px) {
+    .main {
+        height: auto;
+
+        .main-banner {
+            margin: 1rem;
+        }
+    }
+
     .main .secondary {
         .forecast, .custom {
             width: 100%;
@@ -475,6 +499,14 @@ $roboto: 'Roboto', sans-serif;
     .header {
         .nav {
             justify-content: space-between;
+        }
+    }
+
+    .main {
+        height: auto;
+
+        .main-banner {
+            margin: 1rem;
         }
     }
 

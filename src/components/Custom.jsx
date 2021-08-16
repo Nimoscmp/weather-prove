@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { dataEnglish , dataSpanish } from "../utils/constants"
 import ShowPlace from "./ShowPlace";
 
@@ -9,6 +10,9 @@ const Custom = () => {
     const [clickedSearchBtn, setClickedSearchBtn] = useState(false);
     const [cityName, setCityName] = useState('');
     const [error, setError] = useState(false);
+
+    //  Global states
+    const dark = useSelector(state => state.theme);
 
     const clickButton = () => {
         setLookPlace(true);
@@ -46,7 +50,7 @@ const Custom = () => {
 
     return (
     <>
-        <section className="custom bg-city">
+        <section className={dark ? "custom bg-city shadow-light" : "custom bg-city shadow-dark"}>
             <div className="fade"></div>
             <div className="title">
                 <span>{dataEnglish.custom.title}</span>
