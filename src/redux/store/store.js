@@ -2,7 +2,7 @@
 import { applyMiddleware, createStore, compose, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 //Ducks
-import { selectThemeReducer } from '../reducers/';
+import { selectLanguageReducer, selectThemeReducer } from '../reducers/';
 
 
 
@@ -10,6 +10,7 @@ import { selectThemeReducer } from '../reducers/';
 const rootReducer = combineReducers({
     //Different reducers are consumed into store
     theme: selectThemeReducer,
+    lang: selectLanguageReducer
 })
 
 //Store data in redux devtools extension

@@ -1,16 +1,25 @@
 import { useDispatch, useSelector } from "react-redux";
-import { select_dark_theme_action , select_light_theme_action} from "../redux/actions/";
+import { select_dark_theme_action , select_language_eng_action, select_language_spa_action, select_light_theme_action} from "../redux/actions/";
 
 const Header = () => {
 
     const dispatch = useDispatch();
     const dark = useSelector(state => state.theme);
+    const lang = useSelector(state => state.lang);
 
     const handleThemeClick = () => {
         if (dark) {
             dispatch(select_light_theme_action());
         } else {
             dispatch(select_dark_theme_action());
+        }
+    }
+
+    const handleLangClick = lang => {
+        if (lang === 'eng') {
+            dispatch(select_language_eng_action());
+        } else {
+            dispatch(select_language_spa_action());
         }
     }
 
@@ -21,10 +30,12 @@ const Header = () => {
                 <div className={dark ? "language color-light-gray" : "language color-gray"}>
                     <span 
                         className="pointer"
+                        onClick={() => handleLangClick('eng')}
                         >ENG</span>
                     <span>|</span>
                     <span 
                         className="pointer"
+                        onClick={() => handleLangClick('spa')}
                         >ESP</span>
                 </div>
                 <div className="theme">

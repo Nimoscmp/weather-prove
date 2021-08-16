@@ -1,7 +1,3 @@
-export const theme = {
-    dark: false
-}
+export const theme = false;
 
-export const language = {
-    eng: true
-}
+export const language = true;
