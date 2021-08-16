@@ -84,6 +84,14 @@
   color: #2e2e2e;
 }
 
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
 .shadow-light {
   -webkit-box-shadow: 3px 3px 9px #ccc;
           box-shadow: 3px 3px 9px #ccc;
@@ -170,6 +178,8 @@
 
 .header .nav .language span {
   margin: 0.4rem;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .header .nav .theme {

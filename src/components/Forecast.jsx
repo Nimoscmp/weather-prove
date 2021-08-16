@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { calculateDay } from '../utils/calculations';
+import { dataEnglish, dataSpanish } from '../utils/constants';
 
 const Forecast = () => {
     //  Constants
@@ -12,11 +13,13 @@ const Forecast = () => {
 
     //  Global states
     const dark = useSelector(state => state.theme);
+    const english = useSelector(state => state.lang);
 
     //  Day names
     const selectDay = (day) => {
 
         let theDay;
+        let language;
 
         if (day > 7) {
             theDay = day - 7;
@@ -24,41 +27,54 @@ const Forecast = () => {
             theDay = day;
         }
 
-        stringDay = calculateDay(theDay, 'eng');
+        if (english) {
+            language = 'eng';
+        } else {
+            language = 'spa';
+        }
+
+        stringDay = calculateDay(theDay, language);
 
         return stringDay;
     }
 
     useEffect(() => {
         const getData = () => {
-            // const lat = '4.707'
-            // const lon = '-74.107'
-            // const api_key = '0b79dea464b8f769b18696de8de31770';
-            // const base_url = `https://api.openweathermap.org/data/2.5/onecall?lat=${ lat }&lon=${ lon }&exclude=minutely,hourly&appid=${ api_key }&units=metric`;
-            // // const base_url = `https://api.openweathermap.org/data/2.5/weather?q=Paris&lang=es&appid=${ api_key }&units=metric`;
-            // const xhttp = new XMLHttpRequest();
-            // var json;
+            let language;
+            const lat = '4.707';
+            const lon = '-74.107';
+
+            if (english) {
+                language = 'en';
+            } else {
+                language = 'es';
+            }
+
+            const api_key = '0b79dea464b8f769b18696de8de31770';
+            const base_url = `https://api.openweathermap.org/data/2.5/onecall?lat=${ lat }&lon=${ lon }&exclude=minutely,hourly&lang=${language}&appid=${ api_key }&units=metric`;
+
+            const xhttp = new XMLHttpRequest();
+            var json;
         
-            // xhttp.open('GET', base_url, true);
+            xhttp.open('GET', base_url, true);
         
-            // xhttp.send();
+            xhttp.send();
         
-            // xhttp.onreadystatechange = function() {
-            //     if (this.readyState === 4 && this.status === 200) {
-            //         json = JSON.parse(this.response);
-            //         setResponse(json);
-            //     }
-            // }
+            xhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    json = JSON.parse(this.response);
+                    setResponse(json);
+                }
+            }
         }
         // getData();
-        console.log(response);
         // eslint-disable-next-line
-    }, [])
+    }, [english])
 
     return (
     <>
         <section className={dark ? "forecast shadow-light" : "forecast shadow-dark"}>
-            <h3 className={dark ? "cast-title color-light" : "cast-title"}><span>3 days</span> forecast</h3>
+            <h3 className={dark ? "cast-title color-light" : "cast-title"}><span>{english ? dataEnglish.forecast.first : dataSpanish.forecast.first }</span> {english ? dataEnglish.forecast.second : dataSpanish.forecast.second }</h3>
 
             <div className="days">
                 <div className="sub-section">

@@ -103,6 +103,14 @@ $roboto: 'Roboto', sans-serif;
     color: $dark;
 }
 
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
 .shadow-light {
     box-shadow: 3px 3px 9px $light;
 }
@@ -171,6 +179,7 @@ $roboto: 'Roboto', sans-serif;
     
             span {
                 margin: 0.4rem;
+                transition: color 0.3s ease-in-out;
             }
         }
     

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 // import { getData } from '../services/api/weatherApi';
 import '../styles/sass/styles.css';
+import { dataEnglish, dataSpanish } from '../utils/constants';
 
 const MainBanner = () => {
 
@@ -15,6 +16,7 @@ const MainBanner = () => {
 
     //  Global states
     const dark = useSelector(state => state.theme);
+    const english = useSelector(state => state.lang);
 
     useEffect(() => {
         if ((hours >= 18 && hours <= 24) || (hours <= 0 && hours < 6)) {
@@ -40,12 +42,10 @@ const MainBanner = () => {
             //     if (this.readyState === 4 && this.status === 200) {
             //         json = JSON.parse(this.response);
             //         setResponse(json);
-            //         console.log(json);
             //     }
             // }
         }
         // getData();
-        // console.log(response);
         // eslint-disable-next-line
     }, [])
 
@@ -55,7 +55,7 @@ const MainBanner = () => {
             <div className="fade"></div>
             <h5 className="title">
                 <i className="fas fa-map-marker-alt fa-2x m-05"></i>
-                <span className="city">Bogotá</span>
+                <span className="city">{english ? dataEnglish.bog : dataSpanish.bog }</span>
                 <img 
                     src={`https://openweathermap.org/img/w/${ response?.weather[0].icon }.png`} 
                     alt="weather"
@@ -63,15 +63,15 @@ const MainBanner = () => {
             </h5>
             <div className="data">
                 <div className="data-item">
-                    <h5 className="h5">Temperatura</h5>
+                    <h5 className="h5">{english ? dataEnglish.temp : dataSpanish.temp }</h5>
                     <span className="temp">{Math.round(response?.main.temp)}&#8451;</span>
                 </div>
                 <div className="data-item">
-                    <h5 className="h5">Sensación térmica</h5>
+                    <h5 className="h5">{english ? dataEnglish.feelsLike : dataSpanish.feelsLike }</h5>
                     <span className="temp">{Math.round(response?.main.feels_like)}&#8451;</span>
                 </div>
                 <div className="data-item">
-                    <h5 className="h5">Nubosidad</h5>
+                    <h5 className="h5">{english ? dataEnglish.clouds : dataSpanish.clouds }</h5>
                     <span className="temp">{Math.round(response?.clouds.all)}%</span>
                 </div>
             </div>
