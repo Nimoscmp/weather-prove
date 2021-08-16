@@ -30,7 +30,7 @@ const ParisBanner = () => {
                 }
             }
         }
-        // getData();
+        getData();
         // eslint-disable-next-line
     }, [])
 

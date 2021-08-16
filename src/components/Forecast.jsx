@@ -67,7 +67,7 @@ const Forecast = () => {
                 }
             }
         }
-        // getData();
+        getData();
         // eslint-disable-next-line
     }, [english])
 

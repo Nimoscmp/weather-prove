@@ -45,7 +45,7 @@ const MainBanner = () => {
                 }
             }
         }
-        // getData();
+        getData();
         // eslint-disable-next-line
     }, [])
 

@@ -35,7 +35,7 @@ const ShowPlace = ({clickedSearchBtn, cityName, error}) => {
                     }
                 }
             }
-            // getData();
+            getData();
             if (!errorResponse && !error) {
                 setShowPlace(true);
             }
